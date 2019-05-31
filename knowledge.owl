@@ -1,0 +1,2720 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#"
+     xml:base="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cad_based_assembly="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly">
+        <rdfs:comment xml:lang="en">CAD-based assembly ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#approximates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#approximates">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isApproximatedBy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#executedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#executedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAffordance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAffordance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasApex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasApex"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAxis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAxis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasCADConstraint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasCADConstraint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasConnectingGeometricPrimitive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasConnectingGeometricPrimitive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasConnection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasConnection">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasDirection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasDirection">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isAFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMonitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMonitor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasOrientation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSubTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSubTask">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CompositeTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isAFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isAFeatureOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isAppliedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isAppliedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isApproximatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isApproximatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isCapableOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#isCapableOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#angle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#angle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasDiameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasFocal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasFocal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMajorRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMajorRadius">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMinorRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMinorRadius">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasRadius">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSemiAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSemiAngle">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#x -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#x">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#y -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#y">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#z -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#z">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AirCompressor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AirCompressor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignOneSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignOneSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignToSurface"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignToSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignToSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignTwoSurfaces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignTwoSurfaces">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AlignToSurface"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AngleConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AngleConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ApplyWrench -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ApplyWrench">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This skill applies the predefined target wrench in a specified task frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AssemblyTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AssemblyTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisPositionConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisPositionConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+        <rdfs:comment>This impose position-level constraint on one of the axis of a task frame e.g. constraint on the x-axis position of the end-effector frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+        <rdfs:comment xml:lang="en">Velocity constraint on a frame&apos;s axis e.g. imposing a certain velocity on the x-axis of the end-effector frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BSplineCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BSplineCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BSplineSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BSplineSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Bearing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Bearing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BezierCurve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BezierCurve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BezierSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BezierSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BoxGrip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BoxGrip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Grip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CarDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CarDoor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Circle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Circle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasRadius"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CompSolid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CompSolid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CompositeTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CompositeTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSubTask"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A composite task consists of one or more subtasks run in parallel. An example use case of this notion is to describe an assembly that involves more than one pair of feature mating e.g. assembling the a top lid of air compressor (with two holes) into the housing with two rotors already in place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Compound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Compound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasApex"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasRadius"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeConeConcentric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeConeConcentric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderCylinderConcentric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeGrip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeGrip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Grip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeSphereConcentric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeSphereConcentric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Sphere"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContactTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContactTask">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#executedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Contour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Contour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing2D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing2D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing2_5D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing2_5D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AngleConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing3D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing3D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContourFollowing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AngleConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Conveyor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Conveyor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WorkcellPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem2DEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem2DEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystemEntity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem3DEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem3DEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem3DEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystemEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystemEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystemEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CurveSurfaceCoincident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CurveSurfaceCoincident">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneCoincident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAxis"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasRadius"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderConeConcentric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderConeConcentric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderCylinderConcentric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderCylinderConcentric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderCylinderParallel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderCylinderParallel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ParallelConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorParallelConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderGrip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderGrip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Grip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderSphereConcentric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderSphereConcentric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConcentricConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Sphere"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylindricalInsert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylindricalInsert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Insertion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This skill implements force-based insertion of a cylindrical peg i.e. the peg can freely rotate about its main axis (typicall chosen as z-axis)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#DistanceConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#DistanceConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Drum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Drum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Edge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Edge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Ellipse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Ellipse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasFocal"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMajorRadius"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasMinorRadius"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Face -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Face">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Fixture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Fixture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WorkcellPart"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Table"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WrenchConstraint"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WrenchConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A skill that has at least one wrench constraint</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive">
+        <rdfs:comment xml:lang="en">Geometric primitives as described in Perzylo et. al. , &quot;An ontology for CAD data and geometric constraints as a link
+between product models and semantic robot task descriptions&quot;, IROS 2015.
+
+Geometric primitives are the primitives defined in the CAD domain, not skill domain. An object which is modeled as a CAD file consisted of these primitives.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Grip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Grip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Housing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Housing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Hyperbola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Hyperbola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#InsertTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#InsertTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AssemblyTask"/>
+        <rdfs:comment xml:lang="en">This task abstracts any assembly task that involves bringing a shaft-like part inside a hole, or conversely, a hole into a shaft. The task may require force control or purely based on position control. A non-exhaustive list of examples:
+- round peg in hole
+- rectangular peg in hole</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Insertion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Insertion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#JointPositionConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#JointPositionConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+        <rdfs:comment xml:lang="en">Constraining the joint position of the robot</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#JointVelocityConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#JointVelocityConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+        <rdfs:comment xml:lang="en">Constraining the joint velocity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasDirection"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineAngle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineAngle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AngleConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorAngleConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineCoincident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineCoincident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineParallel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineParallel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ParallelConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorParallelConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLinePerpendicular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLinePerpendicular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PerpendicularConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorPerpendicularConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePlaneCoincident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePlaneCoincident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CurveSurfaceCoincident"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Application example(s) of this constraint:
+- making an edge of a box in contact with a table</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePlanePerpendicular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePlanePerpendicular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PerpendicularConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorParallelConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePointDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePointDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#DistanceConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointVectorDistanceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveAbsolute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveAbsolute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PoseConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Perform Cartesian motion with respect to a specified reference frame (typically world frame)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveAlignAxis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveAlignAxis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveAlignTwoAxes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveAlignTwoAxes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveGuarded -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveGuarded">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisVelocityConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">a skill that moves a task frame along one of its axis with a given velocity and stops as soon as a force threshold is reached</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveJoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveJoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#JointPositionConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveOnSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveOnSurface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AxisPositionConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveRelative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#MoveRelative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PoseConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Perform relative motion in Cartesian space with respect to a specified reference frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#NonCylindricalInsert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#NonCylindricalInsert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Insertion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This skill implements a force-based insertion of noncylindrical peg such that torque about the axis of the peg (typically chosen as z-axis) should be controlled</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Object">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Orientation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Orientation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem3DEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAxis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#angle"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Orientations are defined with the axis-angle representation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#OrientationConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#OrientationConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Parabola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Parabola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ParallelConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ParallelConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PerpendicularConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PerpendicularConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlaceTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlaceTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AssemblyTask"/>
+        <rdfs:comment xml:lang="en">This task abstracts the task of placing a part on with an open hole/groove. Examples of concrete tasks that can be performed:
+- placing a box into a corner 
+- placing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAxis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneAngle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneAngle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AngleConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorAngleConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneCoincident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneCoincident">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SurfaceSurfaceCoincident"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Application example(s) of this constraint:
+- making a box&apos;s surface in contact with a table</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneParallel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneParallel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ParallelConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorParallelConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlanePerpendicular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlanePerpendicular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PerpendicularConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorPerpendicularConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePointDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePointDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#DistanceConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointVectorDistanceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointPointDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointPointDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#DistanceConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointPointDistanceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointPointDistanceConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointPointDistanceConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointVectorDistanceConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointVectorDistanceConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem3DEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasOrientation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Orientation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasPosition"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PoseConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PoseConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+        <rdfs:comment xml:lang="en">This impose a full pose constraint on a selected task frame e.g. a constraint on the pose of the end-effector frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A skill that is consisted of only kinematic constraints</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Rotor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Rotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ScrewTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ScrewTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#AssemblyTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ContactTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This task abstracts the task of securing a screw into a thread. By definition, this task requires force control.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Screwing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Screwing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This skill implements screwing task with the assumption that the screw model is unavailable. This assumption typically makes sense for STEP file description of screw which usually neglects the pitch model. The implication of this assumption is that force control is required for the skill.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Shell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Shell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint">
+        <rdfs:comment xml:lang="en">Motion constraints are the building blocks of concrete/grounded skill. For instance, an approach_object skill can be composed of line_line_coincident_constraint and velocity constraint</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Solenoid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Solenoid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Solid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Solid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Sphere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Sphere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasAxis"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasLocation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasRadius"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SphereGrip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SphereGrip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Grip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#GeometricPrimitive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SurfaceSurfaceCoincident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SurfaceSurfaceCoincident">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasGeometricPrimitive"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoincidentConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#groundedIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ForceConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Table -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Table">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WorkcellPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TangentConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TangentConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Task">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Skill"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasCADConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CADConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopLid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopLid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity">
+        <rdfs:comment xml:lang="en">Topological primitives as described in Perzylo et. al. , &quot;An ontology for CAD data and geometric constraints as a link
+between product models and semantic robot task descriptions&quot;, IROS 2015.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Toroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Toroid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TorqueConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WrenchConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TracePath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TracePath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PositionControlSkill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#hasSkillConstraint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PoseConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Turntable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Turntable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WorkcellPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TwistConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TwistConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem3DEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#x"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#y"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#z"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector2D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector2D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CoordinateSystem2DEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorAngleConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorAngleConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorCollinearConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorParallelConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorParallelConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorPerpendicularConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#VectorVectorPerpendicularConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#KinematicConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vertex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vertex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Wire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Wire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#TopologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WorkcellPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WorkcellPart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Workpiece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WrenchConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#WrenchConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SkillConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Box_Side_Edge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Box_Side_Edge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Housing"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Big_Hole"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Big_Hole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Big_Hole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Big_Hole_Cylindrical_Surface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Big_Hole_Cylindrical_Surface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+        <hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</hasDiameter>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+        <isApproximatedBy rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Cylinder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Bottom_Plane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Bottom_Plane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Cylinder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Cylinder">
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Bottom_Plane"/>
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Cylindrical_Surface"/>
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Top_Plane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Cylindrical_Surface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Cylindrical_Surface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+        <hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.06106000000000002</hasDiameter>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Top_Plane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Housing_Small_Hole_Top_Plane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Rotor"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Cylinder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Cylinder">
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Cylindrical_Surface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Cylindrical_Surface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Cylindrical_Surface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+        <hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.06096</hasDiameter>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ObjectFeature"/>
+        <isApproximatedBy rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Cylinder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Axis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Axis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Bottom_Plane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Bottom_Plane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Cylinder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Cylinder">
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Bottom_Plane"/>
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Cylindrical_Surface"/>
+        <hasGeometricPrimitive rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Top_Plane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Cylindrical_Surface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Cylindrical_Surface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+        <hasAxis rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Top_Plane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#C55_Small_Rotor_Shaft_Top_Plane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Table_Edge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Table_Edge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BSplineCurve"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BezierCurve"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Circle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Ellipse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Hyperbola"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Line"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Parabola"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#BoxGrip"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#ConeGrip"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CylinderGrip"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#SphereGrip"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#CompSolid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Compound"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Edge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Face"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Shell"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Solid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vertex"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Wire"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Cylinder"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Plane"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Sphere"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Curve"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Point"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Surface"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineAngle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLineParallel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LineLinePerpendicular"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#LinePointDistance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePlaneAngle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PlanePointDistance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#PointPointDistance"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Orientation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Pose"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yudha/ontologies/2018/9/cad_based_assembly#Vector"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
